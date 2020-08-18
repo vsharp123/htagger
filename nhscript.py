@@ -31,5 +31,3 @@ soupnyh = BeautifulSoup(matternyh, 'html.parser')
 print_info(soupnh, urlnh, "nhentai")
 print_info(soup9h, url9h, "9hentai")
 print_info(soupnyh, urlnyh, "nyahentai")
-
-    
