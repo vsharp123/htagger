@@ -1,5 +1,5 @@
 # htagger
-Enter the 6 digits, currently searches 3 sites: nhentai, 9hentai and nyahentai.
+Enter the 6 digits, currently searches 3 sites: nhentai, 9hentai and nyahentai and gives the tags of the given manga.
 
 # Dependencies
 
@@ -18,6 +18,3 @@ You're done. It gives you a URL too.
 
 # Known issues
 Though a particular manga may not exist, the URL will be displayed followed by "does not exist".
-
-
-
