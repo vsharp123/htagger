@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
-
+import argparse
 
 def print_info(soup, url, site_name):
     try:
@@ -12,8 +12,11 @@ def print_info(soup, url, site_name):
 
 
 while True:
-    print("Enter sacred 6 digit moolah:")
-    moolah = input()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("manga_id", help="ID of the manga.", type=int)
+    data=parser.parse_args()    
+    moolah = str(data.manga_id)
+        
     if moolah.isnumeric():
         urlnh = "https://nhentai.net/g/" + moolah
         url9h = "https://9hentai.com/g/" + moolah
