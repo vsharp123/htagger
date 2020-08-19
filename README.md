@@ -12,9 +12,11 @@ Python 3, bs4 and requests. Platform independent.
 pip install bs4
 pip install requests
 ```
-## Run script and enter input.
-
-You're done. It gives you a URL too.
+## Usage
+```
+nhscript.py [manga_id]
+```
+That's it.
 
 # Known issues
 Though a particular manga may not exist, the URL will be displayed followed by "does not exist".
