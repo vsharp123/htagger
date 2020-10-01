@@ -16,7 +16,7 @@ def print_info(soup, url, site_name):
     print(f"{data}\n")
 
 
-def main():
+if __name__ == '__main__':
     while True:
         parser = argparse.ArgumentParser()
         parser.add_argument("manga_id", help="ID of the manga.", type=int)
@@ -43,6 +43,6 @@ def main():
             print_info(soup9h, url9h, "9hentai")
             print_info(soupnyh, urlnyh, "nyahentai")
             break
-
-
-main()
+        else:
+            print(f'moolah ({moolah}) is not numeric')
+            break
