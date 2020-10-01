@@ -3,29 +3,30 @@ import requests
 import argparse
 import random
 
+
 def print_info(soup, url, site_name):
     try:
-        data=soup.find(id='tags').text
+        data = soup.find(id='tags').text
     except AttributeError:
-        print("Requested manga not found on "+site_name+". \n")
+        print(f"Requested manga not found on {site_name}. \n")
         return 0
-    
+
     print(site_name)
-    print("Your url:" + url)
-    print(data+"\n")
+    print(f"Your url: {url}")
+    print(f"{data}\n")
 
 
 def main():
     while True:
         parser = argparse.ArgumentParser()
         parser.add_argument("manga_id", help="ID of the manga.", type=int)
-        data=parser.parse_args()    
+        data = parser.parse_args()
         moolah = str(data.manga_id)
-            
+
         if moolah.isnumeric():
-            urlnh = "https://nhentai.net/g/" + moolah
-            url9h = "https://9hentai.com/g/" + moolah
-            urlnyh = "https://nyahentai.com/g/" + moolah
+            urlnh = f"https://nhentai.net/g/{moolah}"
+            url9h = f"https://9hentai.com/g/{moolah}"
+            urlnyh = f"https://nyahentai.com/g/{moolah}"
 
             # fetching stuff
             matternh = requests.get(urlnh).text
