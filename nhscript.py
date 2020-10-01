@@ -9,8 +9,9 @@ def print_info(page_id: int, site: str):
     except AttributeError:
         print(f"Requested manga not found on {site}. \n")
         return
-    
+
     print(f'{site}\nYour url: {manga(page_id, site)}\n{data}\n')
+
 
 def manga(page: int, source: str):
     """Returns the correct URL for the given source"""
@@ -20,8 +21,8 @@ def manga(page: int, source: str):
         return f"https://9hentai.com/g/{page}"
     elif source == 'nyahentai':
         return f"https://nyahentai.com/g/{page}"
-    
-        
+
+
 def fetch_website(url: str):
     """Loading website and returning the HTML"""
     return requests.get(url).text
