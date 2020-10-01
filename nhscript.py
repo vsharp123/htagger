@@ -5,7 +5,7 @@ import argparse
 
 def print_info(page_id: int, site: str):
     try:
-        data = soupify(fetch_website(manga(page_id, site)))
+        data = soupify(fetch_website(manga(page_id, site))).find(id='tags').text
     except AttributeError:
         print(f"Requested manga not found on {site}. \n")
         return
