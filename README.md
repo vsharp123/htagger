@@ -17,6 +17,3 @@ pip install requests
 nhscript.py [manga_id]
 ```
 That's it.
-
-# Known issues
-Though a particular manga may not exist, the URL will be displayed followed by "does not exist".
